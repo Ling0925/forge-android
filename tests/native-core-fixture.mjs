@@ -31,9 +31,9 @@ const SAMPLE_CHECKPOINT_PATH = "src/example.kt";
 const WORKBENCH_REPORT_PATH = "docs/workbench-report.md";
 
 const ANDROID_ROOT = fileURLToPath(new URL("../", import.meta.url));
-const CORE_ROOT = fileURLToPath(
+const CORE_ROOT = resolve(process.env.FORGE_CORE_ROOT ?? fileURLToPath(
   new URL("../../repos/forge-core/", import.meta.url),
-);
+));
 const CORE_SERVER = join(CORE_ROOT, "dist/web/server.js");
 const CORE_RUNTIME = join(CORE_ROOT, "dist/host/runtime.js");
 const CORE_INPUT_QUEUE = join(CORE_ROOT, "dist/core/input-queue.js");

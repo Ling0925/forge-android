@@ -18,9 +18,9 @@ import { join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const ANDROID_ROOT = fileURLToPath(new URL("../", import.meta.url));
-const CORE_ROOT = fileURLToPath(
+const CORE_ROOT = resolve(process.env.FORGE_CORE_ROOT ?? fileURLToPath(
   new URL("../../repos/forge-core/", import.meta.url),
-);
+));
 const FIXTURE_SCRIPT = join(ANDROID_ROOT, "tests", "native-core-fixture.mjs");
 const PORT = Number(process.env.NATIVE_FIXTURE_PORT ?? 18766);
 const ORIGIN = `http://127.0.0.1:${PORT}`;

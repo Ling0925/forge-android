@@ -21,3 +21,11 @@ local.properties
 captures/
 .externalNativeBuild/
 .cxx/
+
+# Local emulator networking/logs, never publish with Android sources.
+/adb.*.log
+/hostapd_*.conf
+/netsim.ini
+/netsimd/
+/android/
+/node-compile-cache/

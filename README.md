@@ -1,5 +1,13 @@
 # Forge Android
 
+独立仓库 `Ling0925/forge-android`，在 Forge 主仓中作为 `android/` 子模块引用。
+应用源码、Gradle 配置和测试只在本仓维护。Android 路径历史从主仓基线
+`a568d4568ebe73057e8ef002c29117179b05bbef` 提取，原提交作者和相关演进保留。
+
+独立克隆后，Gradle 命令直接在本仓根目录执行，不再额外 `cd android`。
+Node 离线联调需要已构建的 Core，指定 `FORGE_CORE_ROOT=/absolute/path/to/forge-core`
+后执行 `node tests/native-workbench-smoke.mjs`；主仓内默认路径仍为 `../repos/forge-core`。
+
 本目录包含两个可以并存安装的应用：
 
 | 模块 | 技术 | 定位 |

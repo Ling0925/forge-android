@@ -1,5 +1,9 @@
 # Android 原生 Core 联调 fixture
 
+在 Forge 主仓内，Core 默认位于 `../repos/forge-core`。独立克隆 Android 仓库时，
+先设置 `FORGE_CORE_ROOT=/absolute/path/to/forge-core` 指向已构建的 Core；两个
+fixture 脚本都会使用该路径。Gradle 和应用源码不依赖主仓目录。
+
 `tests/native-core-fixture.mjs` 是给当前 Android 原生 Kotlin 客户端联调用的
 **API-only fixture**：
 
