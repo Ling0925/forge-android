@@ -96,6 +96,7 @@ async function startFixture() {
         PATH: process.env.PATH ?? "",
         HOME: process.env.HOME ?? "",
         NODE_ENV: "test",
+        FORGE_CORE_ROOT: CORE_ROOT,
       },
       stdio: ["ignore", "pipe", "pipe"],
     },
